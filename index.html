@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d08">
+  <meta name="description" content="A retro RPG-style developer portfolio.">
+  <title>PLAYER ONE — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="brand"><span class="pixel-mark" aria-hidden="true">◆</span> <span id="brandName">PLAYER ONE</span></div>
+    <div class="top-status"><span class="status-dot"></span> PORTFOLIO BUILD 1.0</div>
+  </header>
+
+  <main id="main">
+    <section id="titleScreen" class="screen title-screen" aria-labelledby="gameTitle">
+      <div class="title-art" aria-hidden="true">
+        <div class="moon"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="pixel-tower"><i></i><i></i><i></i></div>
+        <div class="pixel-ground"></div>
+        <div class="little-hero"><b></b><i></i><span></span></div>
+        <span class="star s1">✦</span><span class="star s2">·</span><span class="star s3">✧</span><span class="star s4">·</span>
+      </div>
+      <div class="title-content">
+        <p class="eyebrow">AN INTERACTIVE DEVELOPER PORTFOLIO</p>
+        <h1 id="gameTitle">THE <span>PLAYER</span><br>JOURNAL</h1>
+        <p class="subtitle">A small adventure through skills, projects, and things I'm learning.</p>
+        <div class="press-start"><span class="blink">▶</span> PRESS ENTER TO START</div>
+        <button id="startButton" class="pixel-button primary">START ADVENTURE <span>↵</span></button>
+        <p class="microcopy">KEYBOARD: ↑ ↓ TO SELECT · ENTER TO OPEN</p>
+      </div>
+      <div class="title-footer"><span>© <span id="year"></span> YOUR NAME</span><span>NO QUEST TOO SMALL</span></div>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen hidden" aria-label="Portfolio menu">
+      <aside class="sidebar">
+        <div class="profile-mini">
+          <div class="avatar" aria-hidden="true"><span>☺</span></div>
+          <div><strong id="sidebarName">PLAYER ONE</strong><small>CLASS: DEVELOPER</small></div>
+        </div>
+        <div class="level-card"><div class="level-line"><span>PLAYER LEVEL</span><b>01</b></div><div class="xp-track"><span></span></div><small>XP: LEARNING EVERY DAY</small></div>
+        <nav id="gameNav" class="game-nav" aria-label="Main menu">
+          <button class="nav-item selected" data-screen="about"><span class="nav-icon">▣</span><span>PLAYER PROFILE</span><kbd>1</kbd></button>
+          <button class="nav-item" data-screen="projects"><span class="nav-icon">⚔</span><span>QUEST LOG</span><kbd>2</kbd></button>
+          <button class="nav-item" data-screen="achievements"><span class="nav-icon">★</span><span>ACHIEVEMENTS</span><kbd>3</kbd></button>
+          <button class="nav-item" data-screen="education"><span class="nav-icon">▤</span><span>JOURNEY LOG</span><kbd>4</kbd></button>
+          <button class="nav-item" data-screen="inventory"><span class="nav-icon">▦</span><span>INVENTORY</span><kbd>5</kbd></button>
+          <button class="nav-item" data-screen="extras"><span class="nav-icon">✧</span><span>EXTRAS</span><kbd>6</kbd></button>
+          <button class="nav-item" data-screen="contact"><span class="nav-icon">✉</span><span>CONTACT</span><kbd>7</kbd></button>
+        </nav>
+        <div class="sidebar-bottom"><p>“Small steps<br>build big worlds.”</p><span>★ SAVE POINT REACHED</span></div>
+      </aside>
+
+      <div class="main-panel">
+        <div class="panel-topline"><span id="crumb">MENU / PLAYER PROFILE</span><div class="panel-actions"><button id="soundToggle" class="small-button" aria-pressed="false" title="Toggle optional sound effects">♪ SOUND: OFF</button><button id="backToTitle" class="small-button">↩ TITLE</button></div></div>
+        <div class="mobile-menu-label">SELECT A MENU ITEM</div>
+        <section class="content-section active" id="section-about" data-title="PLAYER PROFILE" tabindex="-1">
+          <div class="section-heading"><span class="heading-icon">▣</span><div><p class="eyebrow">STATUS SCREEN</p><h2>PLAYER PROFILE</h2></div></div>
+          <div class="profile-grid">
+            <div class="character-card">
+              <div class="pixel-avatar" aria-hidden="true"><span class="hair"></span><span class="face"></span><span class="shirt"></span></div>
+              <p class="character-name" id="profileName">YOUR NAME</p><span class="class-tag">CLASS: ASPIRING DEVELOPER</span>
+              <div class="stat"><span>CREATIVITY</span><div><i style="width:72%"></i></div></div>
+              <div class="stat"><span>CURIOSITY</span><div><i style="width:88%"></i></div></div>
+              <div class="stat"><span>PERSEVERANCE</span><div><i style="width:78%"></i></div></div>
+            </div>
+            <div class="text-card">
+              <p class="gold-label">HELLO, TRAVELLER!</p>
+              <h3>I'm <span class="editable-name">YOUR NAME</span>.</h3>
+              <p>I'm a computer science student interested in programming, technology, and making useful things. This portfolio is my little corner of the internet to document what I'm learning and the projects I build.</p>
+              <p>I'm still levelling up, one experiment at a time. Take a look around!</p>
+              <div class="info-list"><div><span>LOCATION</span><b>India</b></div><div><span>CURRENT QUEST</span><b>Learn · Build · Improve</b></div><div><span>GUILD</span><b>Computer Science</b></div></div>
+              <button class="pixel-button" data-go="projects">VIEW QUEST LOG <span>→</span></button>
+            </div>
+          </div>
+          <div class="tip-box"><span>TIP</span> This is your profile screen. Replace the sample text with your own story before publishing.</div>
+        </section>
+
+        <section class="content-section" id="section-projects" data-title="QUEST LOG" tabindex="-1">
+          <div class="section-heading"><span class="heading-icon">⚔</span><div><p class="eyebrow">MISSIONS & BUILDS</p><h2>QUEST LOG</h2></div></div>
+          <p class="section-intro">Every project is a quest. Select a quest to open its repository or live demo.</p>
+          <div class="quest-list">
+            <article class="quest-card"><div class="quest-symbol">⌘</div><div class="quest-body"><div class="quest-meta"><span class="quest-type">MAIN QUEST</span><span class="quest-state">IN PROGRESS</span></div><h3>Student Attention Monitor</h3><p>A Python and computer-vision project exploring webcam-based attention cues.</p><div class="tag-row"><span>PYTHON</span><span>OPENCV</span><span>MEDIAPIPE</span></div><div class="card-actions"><a class="pixel-button compact" href="https://github.com/" target="_blank" rel="noreferrer">SOURCE CODE ↗</a><span class="placeholder-note">Replace link with your repository</span></div></div></article>
+            <article class="quest-card"><div class="quest-symbol">◈</div><div class="quest-body"><div class="quest-meta"><span class="quest-type">SIDE QUEST</span><span class="quest-state">IN PROGRESS</span></div><h3>Pokédex Website</h3><p>A web interface for exploring Pokémon details, types, and abilities.</p><div class="tag-row"><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span></div><div class="card-actions"><a class="pixel-button compact" href="https://github.com/" target="_blank" rel="noreferrer">SOURCE CODE ↗</a><span class="placeholder-note">Replace link with your repository</span></div></div></article>
+            <article class="quest-card"><div class="quest-symbol">✧</div><div class="quest-body"><div class="quest-meta"><span class="quest-type">CREATIVE QUEST</span><span class="quest-state">PLANNED</span></div><h3>This Portfolio</h3><p>A retro RPG-inspired portfolio built to share my work and learning journey.</p><div class="tag-row"><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span></div><div class="card-actions"><a class="pixel-button compact" href="https://github.com/" target="_blank" rel="noreferrer">SOURCE CODE ↗</a><span class="placeholder-note">Add your repository link</span></div></div></article>
+          </div>
+          <div class="tip-box"><span>EDIT</span> Duplicate a quest card in index.html to add more projects. Replace each sample GitHub link with your own.</div>
+        </section>
+
+        <section class="content-section" id="section-achievements" data-title="ACHIEVEMENTS" tabindex="-1">
+          <div class="section-heading"><span class="heading-icon">★</span><div><p class="eyebrow">MILESTONES UNLOCKED</p><h2>ACHIEVEMENTS</h2></div></div>
+          <p class="section-intro">A record of skills learned, challenges finished, and milestones reached.</p>
+          <div class="achievement-grid">
+            <article class="achievement"><div class="badge-icon">⌨</div><div><span class="achievement-rarity">STARTER BADGE</span><h3>First Lines</h3><p>Started learning to write code.</p><span class="unlock-state">✓ UNLOCKED</span></div></article>
+            <article class="achievement"><div class="badge-icon">⌘</div><div><span class="achievement-rarity">BUILDER BADGE</span><h3>Project Crafter</h3><p>Built a project from an idea.</p><span class="unlock-state">✓ UNLOCKED</span></div></article>
+            <article class="achievement"><div class="badge-icon">↻</div><div><span class="achievement-rarity">GRIND BADGE</span><h3>Keep Going</h3><p>Learned from a bug and tried again.</p><span class="unlock-state">✓ ALWAYS ACTIVE</span></div></article>
+            <article class="achievement locked"><div class="badge-icon">?</div><div><span class="achievement-rarity">RARE BADGE</span><h3>Next Milestone</h3><p>Add a real certificate or achievement here.</p><span class="unlock-state">◇ LOCKED — FUTURE QUEST</span></div></article>
+          </div>
+          <h3 class="subheading">SKILL TREE</h3><div class="skill-tree"><div class="skill-node active"><b>PY</b><span>Python</span><small>LEARNING</small></div><div class="tree-branch"></div><div class="skill-node active"><b>HT</b><span>HTML / CSS</span><small>LEARNING</small></div><div class="tree-branch"></div><div class="skill-node"><b>JS</b><span>JavaScript</span><small>LEVEL UP NEXT</small></div><div class="tree-branch"></div><div class="skill-node"><b>GT</b><span>Git / GitHub</span><small>LEARNING</small></div></div>
+          <p class="microcopy">Keep achievements truthful: update these cards as you actually complete milestones.</p>
+        </section>
+
+        <section class="content-section" id="section-education" data-title="JOURNEY LOG" tabindex="-1">
+          <div class="section-heading"><span class="heading-icon">▤</span><div><p class="eyebrow">THE ROAD SO FAR</p><h2>JOURNEY LOG</h2></div></div>
+          <div class="timeline"><article class="timeline-item"><span class="timeline-marker">01</span><div><span class="quest-state">CURRENT CHAPTER</span><h3>Computer Science Student</h3><p>Studying computing fundamentals and exploring programming, web development, and software projects.</p><small>DATES: ADD YOUR YEARS</small></div></article><article class="timeline-item"><span class="timeline-marker">02</span><div><span class="quest-state">SIDE STORY</span><h3>Independent Learning</h3><p>Learning by building small projects, experimenting with tools, and solving problems.</p><small>ONGOING</small></div></article><article class="timeline-item"><span class="timeline-marker">03</span><div><span class="quest-state">NEXT CHAPTER</span><h3>Internship / Career Goal</h3><p>Replace this with your actual next goal, course, or experience.</p><small>UPCOMING</small></div></article></div>
+          <h3 class="subheading">CERTIFICATE ARCHIVE</h3><div class="archive-box"><span class="archive-icon">▧</span><div><b>No scrolls archived yet.</b><p>Add your real certificates, course completions, or awards here when ready.</p></div></div>
+        </section>
+
+        <section class="content-section" id="section-inventory" data-title="INVENTORY" tabindex="-1">
+          <div class="section-heading"><span class="heading-icon">▦</span><div><p class="eyebrow">TOOLS OF THE TRADE</p><h2>INVENTORY</h2></div></div>
+          <p class="section-intro">The tools in my backpack. These are editable examples—keep only what you know or are currently learning.</p>
+          <div class="inventory-grid">
+            <div class="inventory-item"><span class="item-icon">Py</span><b>Python</b><small>LANGUAGE</small></div><div class="inventory-item"><span class="item-icon">HT</span><b>HTML</b><small>WEB</small></div><div class="inventory-item"><span class="item-icon">CS</span><b>CSS</b><small>WEB</small></div><div class="inventory-item"><span class="item-icon">JS</span><b>JavaScript</b><small>LEARNING</small></div><div class="inventory-item"><span class="item-icon">Git</span><b>Git</b><small>VERSION CONTROL</small></div><div class="inventory-item"><span class="item-icon">GH</span><b>GitHub</b><small>REPOSITORIES</small></div><div class="inventory-item"><span class="item-icon">CV</span><b>OpenCV</b><small>COMPUTER VISION</small></div><div class="inventory-item empty-slot"><span class="item-icon">＋</span><b>Empty Slot</b><small>ADD AN ITEM</small></div>
+          </div>
+          <div class="tip-box"><span>INVENTORY NOTE</span> Skill levels are not scored here on purpose—only you can decide how to represent your experience honestly.</div>
+        </section>
+
+        <section class="content-section" id="section-extras" data-title="EXTRAS" tabindex="-1">
+          <div class="section-heading"><span class="heading-icon">✧</span><div><p class="eyebrow">UNLOCKABLE EXTRAS</p><h2>EXTRAS</h2></div></div>
+          <div class="extras-grid"><article class="text-card"><span class="gold-label">PLAYER LORE</span><h3>Beyond the keyboard</h3><p>Add a few things you enjoy outside coding—games, music, books, art, nature, or whatever makes you you.</p></article><article class="text-card"><span class="gold-label">EASTER EGG</span><h3>Secret input</h3><p>Try the classic sequence <code>↑ ↑ ↓ ↓ ← → ← →</code> on your keyboard.</p><p class="microcopy">A tiny hidden surprise is included.</p></article><article class="text-card"><span class="gold-label">CREDITS</span><h3>Built, not looted</h3><p>Made with HTML, CSS, and vanilla JavaScript. Pixel atmosphere, no game engine required.</p></article></div>
+          <div class="secret-message hidden" id="secretMessage" role="status">★ SECRET FOUND: THANKS FOR EXPLORING! ★</div>
+        </section>
+
+        <section class="content-section" id="section-contact" data-title="CONTACT" tabindex="-1">
+          <div class="section-heading"><span class="heading-icon">✉</span><div><p class="eyebrow">OPEN A COMMUNICATION CHANNEL</p><h2>CONTACT</h2></div></div>
+          <div class="contact-panel"><div class="contact-stamp">MAIL<br>POST</div><div><h3>Have a quest in mind?</h3><p>Want to talk about a project, share an opportunity, or just say hello? Send me a message.</p><a class="pixel-button primary" id="emailLink" href="mailto:yourname@example.com">SEND A MESSAGE ↗</a></div></div>
+          <div class="contact-links"><a href="https://github.com/" target="_blank" rel="noreferrer"><span>GH</span><div><b>GITHUB</b><small>github.com/YOUR-USERNAME</small></div>↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><span>in</span><div><b>LINKEDIN</b><small>Add your profile URL</small></div>↗</a></div>
+          <p class="tip-box"><span>IMPORTANT</span> Replace the example email, GitHub profile, and LinkedIn URLs with your real public links before publishing.</p>
+        </section>
+        <footer class="panel-footer"><span>PIXEL BY PIXEL · STEP BY STEP</span><span id="footerStatus">READY</span><span>↑ ↓ NAVIGATE · ENTER SELECT · ESC BACK</span></footer>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
